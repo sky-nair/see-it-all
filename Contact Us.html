@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <script language="javascript">
+            function val(){
+                status=true;
+                p1=document.getElementById("pass").value;
+                p2=document.getElementById("repass").value;
+                ph = document.getElementById("phone").value;
+
+                if(p1!=p2){
+                    alert("Retyped password doesn't match !!");
+                    status=false;
+                    //return false;
+                }
+                else if(p1.length<6){
+                    alert("Entered password length too small !");
+                    //return false;
+                }
+
+                if(isNaN(ph)){ // if ph is not a number (NaN)
+                    alert("Phone number is not valid !");
+                    //return false;
+                }
+               
+                if(!status){
+                    document.getElementById("btn").hidden = true;
+                }
+
+            }
+        </script>
+        <style>
+            body{
+                background-color: lightgreen;
+            }
+            #cntct{
+                color: red;
+                background-color: darkgreen;
+            }
+            #cus{
+                color: darkgreen;
+            }
+            .name{
+                color: white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cus">
+            <center><h1 id="cntct">CONTACT US</h1></center>
+        </div>
+        <h4 style="text-align: center; background-color: black; color: white;"><a href="Home_page.html" style="text-decoration: none;color: white;">HOME PAGE</a></h4>
+        <table align="center"  style="background-color: darkgreen; border-spacing: 30px">
+            <tr>
+                <td>
+                    <img src="https://www.freeiconspng.com/uploads/address-icon-15.png" alt="Address" height="100px" width="100px">
+                </td>
+                <td>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="Gmail" height="100px" width="100px">
+                </td>
+                <td>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUuXHoBKSoHnptobCO9Cv3r73G4-6-LKOiQyZoi7s&s" alt="GitHub">
+                </td>
+
+            </tr>
+            <tr>
+                <td class="name">
+                    Address
+                </td>
+                <td class="name">
+                    Gmail
+                </td>
+                <td class="name">
+                    GitHub
+                </td>
+            </tr>
+
+        </table>
+        <center>
+
+            <h2 style="background-color: aqua;" >Registration form</h2>
+            <hr>
+            <form action="hello.web/?" method="get" >
+            <table cellspacing="4">
+                <tr>
+                    <td>User name</td>
+                    <td><input type="text" required id="user"></td>
+                </tr>
+                <tr>
+                    <td>Email Id</td>
+                    <td><input type="email" id="email" required></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" id="pass" required ></td>
+                </tr>
+                <tr>
+                    <td>Retype password</td>
+                    <td><input type="password" id="repass" required ></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td><input type="text" id="phone" required maxlength="10" ></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2"><button type="submit" style="background-color:#0E86D4;color: white;" onclick="val()" id="btn">Button</button></td>
+                  </tr>
+            </table>
+            </form>
+        </center>
+
+        
+    </body>
+</html>
