@@ -1,4 +1,4 @@
 # see-it-all
 Public works
 
- open Home_page.html to view the website.
+ open index.html to view the website.
